@@ -141,7 +141,7 @@ void SeplosModbus::send(uint8_t address, uint8_t function, uint8_t value) {
 
   const uint16_t lenid = lchksum(1 * 2);
   std::vector<uint8_t> data;
-  data.push_back(0x20);        // VER
+  data.push_back(0x22);        // VER
   data.push_back(address);     // ADDR
   data.push_back(0x46);        // CID1
   data.push_back(function);    // CID2 (0x42)
